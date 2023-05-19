@@ -1,3 +1,9 @@
-import { getGenres } from "./request/Api.js";
+import { getGenre, getAnimesByGenre } from "./request/Api.js";
 
-getGenres();
+const btnGenres = document.querySelectorAll(".btnGenre");
+btnGenres.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const genre = e.target.value;
+    getAnimesByGenre(genre);
+  });
+});
