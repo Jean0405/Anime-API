@@ -1,4 +1,4 @@
-import { getGenre, getAnimesByGenre } from "./request/Api.js";
+import { getGenres, getAnimesByGenre } from "./request/Api.js";
 
 const btnGenres = document.querySelectorAll(".btnGenre");
 btnGenres.forEach((btn) => {
@@ -7,3 +7,4 @@ btnGenres.forEach((btn) => {
     getAnimesByGenre(genre);
   });
 });
+getGenres();
