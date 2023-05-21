@@ -13,16 +13,25 @@ export const getGenres = async () => {
   const Genres = await (
     await fetch("https://anime-db.p.rapidapi.com/genre", options)
   ).json();
-  displayOnLoading(Genres.data);
+  displayOnLoading(Genres);
 };
 
 export const getAnimesByGenre = async (genre) => {
   const Animes = await (
     await fetch(
-      `https://anime-db.p.rapidapi.com/anime?page=1&size=10&genres=${genre}`,
+      `https://anime-db.p.rapidapi.com/anime?page=1&size=2&genres=${genre}`,
       options
     )
   ).json();
-  const listAnimes = Animes.data;
-  renderCards(listAnimes);
+  renderCards(Animes.data);
+};
+
+export const getAnimeSearch = async (data) => {
+  const Anime = await (
+    await fetch(
+      `https://anime-db.p.rapidapi.com/anime?page=1&size=2&search=${data}`,
+      options
+    )
+  ).json();
+  renderCards(Anime.data);
 };

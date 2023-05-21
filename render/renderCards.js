@@ -8,7 +8,7 @@ export function renderCards(listAnimes) {
     card.innerHTML = `
     <img src="${anime.image}" alt="anime img">
     <div>
-        <p class="fw-bold m-0">${anime.title}</p>
+        <p class="text-dark m-0">${anime.title}</p>
     </div>
   `;
     cards_container.appendChild(card);
