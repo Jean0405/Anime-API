@@ -1,4 +1,4 @@
-let sectionInfo = document.querySelector(".anime_info-container");
+export let sectionInfo = document.querySelector(".anime_info-container");
 
 export function renderModalInfo(anime) {
   sectionInfo.innerHTML = "";

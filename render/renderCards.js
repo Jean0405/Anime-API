@@ -1,8 +1,10 @@
 import { getAnimeById } from "../request/Api.js";
+import { sectionInfo } from "./renderModal.js";
 
 const cards_container = document.querySelector(".cards-container");
 
-export function renderCards(listAnimes, genre) {
+export function renderCards(listAnimes) {
+  sectionInfo.innerHTML = "";
   cards_container.innerHTML = "";
   listAnimes.forEach((anime) => {
     const card = document.createElement("div");
