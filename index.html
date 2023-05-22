@@ -13,10 +13,10 @@
     <script src="./main.js" type="module" defer></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bold" href="#">Anime<span class="text-info">Chibi</span></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand fw-bold text-light" href="#">Anime<span class="text-info">Chibi</span></a>
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse py-2" id="navbarSupportedContent">
@@ -26,13 +26,10 @@
             </form>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Genres
                 </a>
                 <ul class="dropdown-menu p-1" id="genres">
@@ -44,6 +41,22 @@
           </div>
         </div>
       </nav>
+
+      <section class="anime_info-container container my-3">
+        <div class="row rounded bg-dark">
+          <img class="col-12 col-sm-4 col-md-4 col-lg-3 p-0" src="https://th.bing.com/th/id/OIP.HJmjxJswAx9G_UQlcKvBjQAAAA?pid=ImgDet&rs=1" alt="">
+          <div class=" col-12 col-sm-8 col-md-8 col-lg-8 p-0 d-flex flex-column align-items-center py-3">
+            <h3 class="fw-bold text-center text-info">Shingeki No Kyojin season 4 part 2</h3>
+            <p class="text-light text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, est!</p>
+            <span class="text-light fw-bold">Tv show</span>
+            <div class="d-flex justify-content-center align-items-center p-1">
+              <span class="text-info fw-bold">4 EPISODES</span>
+              <a class="btn btn-light text-info ms-4" href="#">Ir a ver</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="cards-container">
         <!-- <div class="anime-card">
           <img src="https://th.bing.com/th/id/OIP.HJmjxJswAx9G_UQlcKvBjQAAAA?pid=ImgDet&rs=1" alt="anime img">
