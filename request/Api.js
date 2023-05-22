@@ -28,3 +28,10 @@ export const getAnimeSearch = async (data) => {
   ).json();
   renderCards(Anime.data);
 };
+
+export const getAnimeById = async (id) => {
+  const Anime = await (
+    await fetch(`https://anime-db.p.rapidapi.com/anime/by-id/${id}`, options)
+  ).json();
+  console.log(Anime);
+};
