@@ -1,5 +1,10 @@
 import { displayOnLoading } from "./render/renderLoad.js";
-import { getAnimesByGenre, getAnimeSearch } from "./request/Api.js";
+import {
+  getAnimesByGenre,
+  getAnimeSearch,
+  getAnimeById,
+} from "./request/Api.js";
+
 displayOnLoading();
 const btnGenres = document.querySelectorAll(".btnGenre");
 btnGenres.forEach((btn) => {
@@ -14,3 +19,5 @@ document.querySelector(".submit").addEventListener("click", (e) => {
   let dataInput = document.querySelector(".formSearch").value;
   getAnimeSearch(dataInput);
 });
+
+
