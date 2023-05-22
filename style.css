@@ -50,5 +50,27 @@ html{
 }
 /* ANIME SECTION */
 .anime_info-container{
-   display: none;
+    display: none;
+    scale: 0;
+    opacity: 0;
+    cursor: pointer;
 }
+.fadeIn {
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+/* @media (max-width: 800px) {
+    .anime_info-container{
+        overflow: auto;
+        height: 35rem;
+    }
+  }
+   */
