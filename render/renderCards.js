@@ -6,6 +6,7 @@ const cards_container = document.querySelector(".cards-container");
 export function renderCards(listAnimes) {
   sectionInfo.innerHTML = "";
   cards_container.innerHTML = "";
+
   listAnimes.forEach((anime) => {
     const card = document.createElement("div");
     card.setAttribute("class", "anime-card");

@@ -1,9 +1,5 @@
 import { displayOnLoading } from "./render/renderLoad.js";
-import {
-  getAnimesByGenre,
-  getAnimeSearch,
-  getAnimeById,
-} from "./request/Api.js";
+import { getAnimesByGenre, getAnimeSearch, getAll } from "./request/Api.js";
 
 displayOnLoading();
 const btnGenres = document.querySelectorAll(".btnGenre");
@@ -20,4 +16,17 @@ document.querySelector(".submit").addEventListener("click", (e) => {
   getAnimeSearch(dataInput);
 });
 
+let toggle = document.getElementById("toggle");
+toggle.addEventListener("change", (e) => {
+  let checked = e.target.checked;
+  document.body.classList.toggle("dark");
+  if (checked == true) {
+    label_toggle.innerHTML =
+      '<i class="fa-solid fa-moon" style="color: #009dff;"></i>';
+  } else {
+    label_toggle.innerHTML =
+      '<i class="fa-solid fa-sun" style="color: #fffd80"></i>';
+  }
+});
 
+getAll();
